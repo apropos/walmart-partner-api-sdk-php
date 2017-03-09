@@ -37,7 +37,7 @@ class AuthSubscriber implements SubscriberInterface
         $requestUrl = $event->getRequest()->getUrl();
 
         //decode url back to normal to nextCursor issue. automatic url encoding
-        $requestUrl = rawurldecode($requestUrl);
+//        $requestUrl = rawurldecode($requestUrl);
         $event->getRequest()->setUrl($requestUrl);
 
         $requestMethod = $event->getRequest()->getMethod();
