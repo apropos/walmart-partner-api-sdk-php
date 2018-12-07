@@ -85,7 +85,7 @@ class Order extends BaseClient
                  */
                 /** @var ResponseInterface $response */
                 $response = $e->getResponse();
-                if (strval($response->getStatusCode()) === '404') {
+                if ($response && strval($response->getStatusCode()) === '404') {
                     return [
                         'statusCode' => 200,
                         'list' => [
